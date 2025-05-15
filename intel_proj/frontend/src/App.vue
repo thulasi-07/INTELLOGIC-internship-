@@ -1,4 +1,5 @@
-<!-- EX1. -->
+<!-- 14-05-2025
+EX1. -->
 <!-- <template>
   <div style="padding: 20px;">
     <h1>Hello, Vue Beginner </h1>
@@ -32,9 +33,9 @@ export default {
 };
 </script> -->
 
-
-<!-- EX2. -->
-<template>
+<!-- 15-05-2025
+EX2. -->
+<!-- <template>
   <div>
     <UserInput />
   </div>
@@ -55,4 +56,67 @@ export default {
 body {
   font-family: sans-serif;
 }
-</style>
+</style> -->
+
+
+
+<!-- EX3. -->
+<!-- <template>
+  <div>
+    <ColorBox />
+  </div>
+</template>
+
+<script>
+import ColorBox from './components/ColorBox.vue'
+
+export default {
+  name: 'App',
+  components: {
+    ColorBox
+  }
+}
+</script> -->
+
+
+<!-- EX4. -->
+<!-- <template>
+  <div>
+    <ComputedExample />
+  </div>
+</template>
+
+<script>
+import ComputedExample from './components/ComputedExample.vue'
+
+export default {
+  name: 'App',
+  components: {
+    ComputedExample
+  }
+}
+</script> -->
+
+
+<!-- EX5. -->
+ <template>
+  <div>
+    <WatcherExample />
+  </div>
+</template>
+
+<script>
+import WatcherExample from './components/WatcherExample.vue'
+
+export default {
+  name: 'App',
+  components: {
+    WatcherExample
+  }
+}
+</script>
+
+
+
+
+
