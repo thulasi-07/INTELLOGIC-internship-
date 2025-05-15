@@ -1,4 +1,5 @@
-<template>
+<!-- EX1. -->
+<!-- <template>
   <div style="padding: 20px;">
     <h1>Hello, Vue Beginner </h1>
 
@@ -29,4 +30,29 @@ export default {
     };
   }
 };
+</script> -->
+
+
+<!-- EX2. -->
+<template>
+  <div>
+    <UserInput />
+  </div>
+</template>
+
+<script>
+import UserInput from './components/UserInput.vue'
+
+export default {
+  name: 'App',
+  components: {
+    UserInput
+  }
+}
 </script>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+</style>
