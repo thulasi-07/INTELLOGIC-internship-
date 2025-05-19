@@ -138,30 +138,33 @@ export default {
 <!-- 19-05-2025
 EX7. -->
 <template>
-  <div id="app">
-    <ApplicationForm />
-  </div>
+  <ApplicationForm/>
 </template>
 
 <script>
-import ApplicationForm from './components/Applicationform.vue';
+// import Home from './components/Home.vue';
+// import Family from './components/Family.vue';
+
+
+
+import ApplicationForm from './components/ApplicationForm.vue';
+
 
 export default {
   name: 'App',
   components: {
+    // Home,
+    // Family,
     ApplicationForm
   }
-}
+};
 </script>
 
 <style>
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f2f5;
-  padding: 20px;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 </style>
-
-
 
 
