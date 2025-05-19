@@ -11,17 +11,13 @@ return new class extends Migration
      *
      * @return void
      */
-   public function up()
-{
-    Schema::create('students', function (Blueprint $table) {
-        $table->id();
-        $table->string('name');
-        $table->integer('age');
-        $table->string('course');
-        $table->timestamps();
-    });
-}
-
+    public function up()
+    {
+        Schema::create('application_forms', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('student_forms');
+        Schema::dropIfExists('application_forms');
     }
 };

@@ -2,84 +2,47 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\StudentForm;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
-class StudentFormController extends Controller
+class StudentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return Student::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string',
+            'age' => 'required|integer',
+            'course' => 'required|string',
+        ]);
+
+        return Student::create($validated);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\StudentForm  $studentForm
-     * @return \Illuminate\Http\Response
-     */
-    public function show(StudentForm $studentForm)
+    public function show(Student $student)
     {
-        //
+        return $student;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\StudentForm  $studentForm
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(StudentForm $studentForm)
+    public function update(Request $request, Student $student)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string',
+            'age' => 'required|integer',
+            'course' => 'required|string',
+        ]);
+
+        $student->update($validated);
+        return $student;
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\StudentForm  $studentForm
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, StudentForm $studentForm)
+    public function destroy(Student $student)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\StudentForm  $studentForm
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(StudentForm $studentForm)
-    {
-        //
+        $student->delete();
+        return response()->json(['message' => 'Deleted successfully']);
     }
 }
