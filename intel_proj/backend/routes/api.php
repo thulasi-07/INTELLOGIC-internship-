@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController; // <-- Add this line
+use App\Http\Controllers\ApplicationFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
-Route::apiResource('students', StudentController::class);
+// Application form CRUD API routes
+Route::apiResource('applications', ApplicationFormController::class);
