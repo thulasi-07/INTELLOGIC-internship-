@@ -99,7 +99,7 @@ export default {
 
 
 <!-- EX5. -->
- <template>
+ <!-- <template>
   <div>
     <WatcherExample />
   </div>
@@ -114,8 +114,53 @@ export default {
     WatcherExample
   }
 }
+</script> -->
+
+
+<!-- 16-05-2025
+EX6. -->
+<!-- <template>
+  <div>
+    <StudentForm />
+  </div>
+</template>
+
+<script>
+import StudentForm from '../src/Studentform.vue';
+
+export default {
+  components: {
+    StudentForm
+  }
+}
+</script> -->
+
+<!-- 19-05-2025
+EX7. -->
+<template>
+  <div id="app">
+    <ApplicationForm />
+  </div>
+</template>
+
+<script>
+import ApplicationForm from './components/Applicationform.vue';
+
+export default {
+  name: 'App',
+  components: {
+    ApplicationForm
+  }
+}
 </script>
 
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+</style>
 
 
 
