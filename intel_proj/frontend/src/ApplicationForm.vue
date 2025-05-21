@@ -170,7 +170,21 @@ export default {
 </script>
 
 <style scoped>
-.table th {
-  cursor: pointer;
+main {
+  max-width: 900px;        /* Optional: controls width */
+  margin: 0 auto;          /* Center main container horizontally */
+  text-align: left;        /* Align inner content to left */
+  padding: 20px;
 }
+
+.table {
+  width: 100%;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px;
+}
+
 </style>
