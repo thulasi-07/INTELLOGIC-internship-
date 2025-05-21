@@ -33,9 +33,9 @@ class ApplicationFormController extends Controller
         }
 
         // ✅ Sorting logic
-        $sortKey = $request->input('sortKey', 'name');
-        $sortOrder = $request->input('sortOrder', 'asc');
-        $query->orderBy($sortKey, $sortOrder);
+      //  $sortKey = $request->input('sortKey', 'name');
+      //  $sortOrder = $request->input('sortOrder', 'id');
+      //  $query->orderBy($sortKey, $sortOrder);
 
         // ✅ Pagination
         return response()->json($query->paginate($perPage));
