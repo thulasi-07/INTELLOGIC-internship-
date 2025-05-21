@@ -142,19 +142,16 @@ EX7. -->
 </template>
 
 <script>
-// import Home from './components/Home.vue';
-// import Family from './components/Family.vue';
 
 
 
-import ApplicationForm from './components/ApplicationForm.vue';
+
+import ApplicationForm from './components/ApplicationFormComp.vue';
 
 
 export default {
   name: 'App',
   components: {
-    // Home,
-    // Family,
     ApplicationForm
   }
 };
